@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сложные эффекты</title>
+    <style>
+        h1, h2, h3 {
+            font-family: cursive;
+        }
+    @keyframes change_form {
+
+        from {
+            height: 75px;
+            width: 75px;
+            margin: 13px 13px 12px 12px;
+        }
+
+        50% {
+            height: 100px;
+            width: 100px;
+            margin: 0 0 0 0;
+        }
+
+        to {
+            height: 75px;
+            width: 75px;
+            margin: 13px 13px 12px 12px;
+        }
+        
+    }
+
+    @keyframes change_color {
+
+        from {
+            background-color: rgb(43, 122, 224);
+        }
+
+        25% {
+            background-color: rgb(224, 43, 73);
+        }
+
+        50% {
+            background-color: rgb(221, 224, 43);
+        }
+
+        75% {
+            background-color: rgb(49, 224, 43);
+        }
+
+        to {
+            background-color: rgb(43, 122, 224);
+        }
+
+    }
+
+    @keyframes change_fon {
+
+        from {
+            background: scroll grey url('https://lh6.googleusercontent.com/--MBT_3FgIF0/TWpRpvcRbGI/AAAAAAAACPY/EedntTUnmWc/s1600/priroda+deneg.jpg') 50%/cover no-repeat;
+        }
+        25% {
+            background: scroll grey url('https://www.sunhome.ru/i/wallpapers/128/foto-prirodi-oboi-dlya-rabochego-stola.orig.jpg') 50%/cover no-repeat;
+        }
+        50% {
+            background: scroll grey url('http://picslife.ru/wp-content/uploads/2012/10/unikalnyiy-kipr-dostoprimechatelnosti-i-priroda.jpg') 50%/cover no-repeat;
+        }
+        75% {
+            background: scroll grey url('http://www.radionetplus.ru/uploads/posts/2014-09/1409769496_baykal-18.jpg') 50%/cover no-repeat;
+        }
+        to {
+            background: scroll grey url('https://lh6.googleusercontent.com/--MBT_3FgIF0/TWpRpvcRbGI/AAAAAAAACPY/EedntTUnmWc/s1600/priroda+deneg.jpg') 50%/cover no-repeat;
+        }
+        
+    }
+
+    @keyframes loading {
+
+        from {
+            .z3_1 {
+                border-radius: 5%;
+                transform: translate(0,0);
+            }
+            .z3_2 {
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+            .z3_3 {
+                border-radius: 5%;
+                transform: translate(0,0);
+            }
+            .z3_4 {
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+        }
+
+        15% {
+            .z3_1 {
+                border-radius: 50%;
+                transform: translate(200px,0);
+            }
+            .z3_2 {
+                border-radius: 5%;
+                transform: translate(0,-200px);
+            }
+            .z3_3 {
+                border-radius: 50%;
+                transform: translate(-200px,0);
+            }
+            .z3_4 {
+                border-radius: 5%;
+                transform: translate(0,200px);
+            }
+        }
+
+        
+
+        to {
+            from {
+                border-radius: 5%;
+                transform: translate(0,0);
+            }
+            .z3_2 {
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+            .z3_3 {
+                border-radius: 5%;
+                transform: translate(0,0);
+            }
+            .z3_4 {
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+        }
+
+    }
+
+    @keyframes z3_1 {
+        from {
+                border-radius: 5%;
+                transform: translate(0,0);
+            }
+        20% {
+                border-radius: 50%;
+                transform: translate(200px,0);
+        }
+        25% {
+                border-radius: 50%;
+                transform: translate(200px,0);
+        }
+        45% {
+                border-radius: 5%;
+                transform: translate(200px,200px);
+        }
+        50% {
+                border-radius: 5%;
+                transform: translate(200px,200px);
+        }
+        70% {
+                border-radius: 50%;
+                transform: translate(0,200px);
+        }
+        75% {
+                border-radius: 50%;
+                transform: translate(0,200px);
+        }
+        to {
+                border-radius: 5%;
+                transform: translate(0,0);
+        }
+    }
+    @keyframes z3_2 {
+        from {
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+        20% {
+                border-radius: 5%;
+                transform: translate(0,200px);
+        }
+        25% {
+                border-radius: 5%;
+                transform: translate(0,200px);
+        }
+        45% {
+                border-radius: 50%;
+                transform: translate(-200px,200px);
+        }
+        50% {
+                border-radius: 50%;
+                transform: translate(-200px,200px);
+        }
+        70% {
+                border-radius: 5%;
+                transform: translate(-200px,0);
+        }
+        75% {
+                border-radius: 5%;
+                transform: translate(-200px,0);
+        }
+        to {
+                border-radius: 50%;
+                transform: translate(0,0);
+        }
+    }
+    @keyframes z3_3 {
+        from {
+                border-radius: 5%;
+                transform: translate(0,0);
+            }
+        20% {
+                border-radius: 50%;
+                transform: translate(-200px,0);
+        }
+        25% {
+                border-radius: 50%;
+                transform: translate(-200px,0);
+        }
+        45% {
+                border-radius: 5%;
+                transform: translate(-200px,-200px);
+        }
+        50% {
+                border-radius: 5%;
+                transform: translate(-200px,-200px);
+        }
+        70% {
+                border-radius: 50%;
+                transform: translate(0,-200px);
+        }
+        75% {
+                border-radius: 50%;
+                transform: translate(0,-200px);
+        }
+        to {
+                border-radius: 5%;
+                transform: translate(0,0);
+        }
+    }
+    @keyframes z3_4 {
+        from {
+                border-radius: 50%;
+                transform: translate(0,0);
+            }
+        20% {
+                border-radius: 5%;
+                transform: translate(0,-200px);
+        }
+        25% {
+                border-radius: 5%;
+                transform: translate(0,-200px);
+        }
+        45% {
+                border-radius: 50%;
+                transform: translate(200px,-200px);
+        }
+        50% {
+                border-radius: 50%;
+                transform: translate(200px,-200px);
+        }
+        70% {
+                border-radius: 5%;
+                transform: translate(200px,0);
+        }
+        75% {
+                border-radius: 5%;
+                transform: translate(200px,0);
+        }
+        to {
+                border-radius: 50%;
+                transform: translate(0,0);
+        }
+    }
+
+    @keyframes svet_1 {
+        from {
+            background-color: grey;
+        }
+        2% {
+            background-color: red;
+        }
+        50% {
+            background-color: red;
+        }
+        60% {
+            background-color: grey;
+        }
+        70% {
+            background-color: red;
+        }
+        80% {
+            background-color: grey;
+        }
+        90% {
+            background-color: red;
+        }
+        to{
+            background-color: grey;
+        }
+    }
+
+    @keyframes svet_2 {
+        from {
+            background-color: grey;
+        }
+        2% {
+            background-color: yellow;
+        }
+        90% {
+            background-color: yellow;
+        }
+        to{
+            background-color: grey;
+        }
+    }
+
+     @keyframes svet_3 {
+        from {
+            background-color: grey;
+        }
+        2% {
+            background-color: rgb(0, 180, 0);
+        }
+        50% {
+            background-color: rgb(0, 180, 0);
+        }
+        60% {
+            background-color: grey;
+        }
+        70% {
+            background-color: rgb(0, 180, 0);
+        }
+        80% {
+            background-color: grey;
+        }
+        90% {
+            background-color: rgb(0, 180, 0);
+        }
+        to{
+            background-color: grey;
+        }
+    }
+
+    @keyframes svet_load {
+        from {
+            width: 0px;
+            background-color: greenyellow;
+        }
+        99% {
+            width: 200px;
+            background-color: greenyellow;
+        }
+        to {
+            width: 200px;
+            background-color: lime;
+        }
+    }
+
+    .z1 {
+        height: 75px;
+        box-sizing: border-box;
+        width: 75px;
+        border-radius: 50%;
+        position: absolute;
+        left: 300px;
+        top: 200px;
+        margin: 13px 13px 12px 12px;
+        background-color: rgb(43, 122, 224);
+        animation: change_form 1s infinite ease-in-out, change_color 2s infinite ease;
+    }
+
+    .z2 {
+        width: 1024px;
+        height: 768px;
+        transition: 5s;
+        margin: auto;
+        background: scroll grey url('https://lh6.googleusercontent.com/--MBT_3FgIF0/TWpRpvcRbGI/AAAAAAAACPY/EedntTUnmWc/s1600/priroda+deneg.jpg') 50%/cover no-repeat; 
+        animation: change_fon 20s infinite ease;
+    }
+
+    .z3 {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+    .loading {
+        position: relative;
+        margin: 100px;
+        box-sizing: border-box;
+    }
+
+    .z3_1 {
+        background-color: orange;
+        left: 10px;
+        top: 10px;
+        border-radius: 5%;
+        animation: z3_1 2s ease infinite -.4s;
+    }
+    .z3_2 {
+        background-color: red;
+        left: 210px;
+        top: 10px;
+        border-radius: 50%;
+        animation: z3_2 2s ease infinite -.4s;
+    }
+    .z3_3 {
+        background-color: rgb(0, 180, 0);
+        left: 210px;
+        top: 210px;
+        border-radius: 5%;
+        animation: z3_3 2s ease infinite -.4s;
+    }
+    .z3_4 {
+        background-color: blue;
+        left: 10px;
+        top: 210px;
+        border-radius: 50%;
+        animation: z3_4 2s ease infinite -.4s;
+    }
+    .svet {
+        position: relative;
+        width: 80px;
+        height: 240px;
+        border: solid rgb(78, 78, 78) 2px;
+        left: 100px;
+        box-shadow: 3px 1px 5px rgba(0,0,0,0.5);
+    }
+    .z4_1 {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        background-color: grey;
+        top: 15px;
+        left: 10px;
+    }
+    .z4_2 {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        background-color: grey;
+        top: 90px;
+        left: 10px;
+    }
+    .z4_3 {
+        position: absolute;
+        height: 60px;
+        width: 60px;
+        background-color: grey;
+        top: 165px;
+        left: 10px;
+    }
+    .z4_44 {
+        position: relative;
+        height: 30px;
+        width: 200px;
+        background-color: rgb(177, 177, 177);
+        border: solid rgb(78, 78, 78) 2px;
+        box-shadow: 3px 1px 5px rgba(0,0,0,0.5);
+        left: 100px;
+        top: 190px;
+    }
+    .z4_4 {
+        position: absolute;
+        top: 0px;
+        height: 30px;
+        width: 0px;
+        background-color: greenyellow;
+    }
+    .svet:hover .z4_1 {
+        animation: svet_1 5s ease 1 0s;
+    }
+    .svet:hover .z4_2 {
+        animation: svet_2 4s ease 1 5s;
+    }
+    .svet:hover .z4_3 {
+        animation: svet_3 5s ease 1 9s;
+    }
+    .svet:hover .z4_4 {
+        animation: svet_load 14s ease-in-out 1 0s;
+    }
+    span {
+        font-family: cursive;
+        margin-left: 20px;
+        color:rgb(85, 85, 85);
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Сложные анимации:</h1>
+    </header>
+    <main>
+        <h2>Задание 1</h2>
+        <h3>Двойная анимация - масштабирование и смена цвета</h3>
+        <div class="z1"></div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Задание 2</h2>
+        <h3>Смена изображения заднего фона (4 картинки)</h3>
+        <div class="z2"></div>
+        <br>
+        <h2>Задание 3</h2>
+        <h3>Загрузка. Смена border-radius, transform, отрицательный animation-delay</h3>
+        <div class="loading">
+            <div class="z3 z3_1"></div>
+            <div class="z3 z3_2"></div>
+            <div class="z3 z3_3"></div>
+            <div class="z3 z3_4"></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h2>Задание 4</h2>
+        <h3>Светофор:</h3>
+        <div class="svet">
+            <div class="z4_1"></div>
+            <div class="z4_2"></div>
+            <div class="z4_3"></div>
+            <div class="z4_44">
+                <span>прогресс светофора</span>
+                <div class="z4_4"></div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </main>
+</body>
+</html>
